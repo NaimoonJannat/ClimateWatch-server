@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const { getAllVolunteers } = require("./controllers/volunteer");
+const blogsRouter = require("./routers/blogs");
+const projectsRouter = require("./routers/projects");
 
 const app = express();
 require("dotenv").config();
@@ -13,6 +15,10 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/volunteers', getAllVolunteers)
+
+app.use('/blogs', blogsRouter)
+
+app.use('/projects', projectsRouter)
 
 
 
