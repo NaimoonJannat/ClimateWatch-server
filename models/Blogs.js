@@ -4,16 +4,16 @@ const blogsSchema = new mongoose.Schema(
 
 
   {
-    photo_url: String,
-    post_date: String,
+    imgUrl: String,
+    email: String,
     description: String,
-    effect_on_title: String,
-    health_issues_arise: String,
+    title: String,
+    // health_issues_arise: String,
     blogger_photo: String,
-    additional_photos: [String],
+    // additional_photos: [String],
     blogger_name: String,
-    tags: [String],
-    blogger_description: String,
+    category: [String],
+    // blogger_description: String,
     
 
   },
